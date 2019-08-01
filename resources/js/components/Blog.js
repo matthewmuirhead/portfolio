@@ -116,7 +116,7 @@ class Blog extends Component {
                                     <CardMedia
                                         style = {{ height: 0}}
                                         className={classes.media}
-                                        image={require (blog.header_img)}
+                                        image={blog.header_img}
                                         title={blog.title}
                                     />
                                     <CardContent>
