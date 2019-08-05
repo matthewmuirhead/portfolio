@@ -5,6 +5,7 @@ import Home from './Home';
 import Login from './Login';
 import About from './About';
 import Blog from './Blog';
+import BlogArticle from './BlogArticle';
 import NavBar from './NavBar';
 
 class DebugRouter extends Router {
@@ -21,23 +22,26 @@ class DebugRouter extends Router {
 }
 
 export default class Main extends Component {
+
     render() {
         return (
-            <div>
-                <div>
-                    <DebugRouter>
-                        <div>
-                            <NavBar />
-                            <div className="container">
-                                <Route path="/" exact component={Home}/>
-                                <Route path="/about" exact component={About}/>
-                                <Route path="/blog" exact component={Blog}/>
-                                <Route path="/login" exact component={Login}/>
-                            </div>
-                        </div>
-                    </DebugRouter>
-                </div>
-            </div>
+          <div className="container">
+              <DebugRouter>
+                  <div className="container">
+                      <Route path="/about" exact component={NavBar}/>
+                      <Route path="/blog" exact component={NavBar}/>
+                      <Route path="/blog/:id" exact component={NavBar}/>
+                      <Route path="/login" exact component={NavBar}/>
+                      <div className="container">
+                          <Route path="/" exact component={Home}/>
+                          <Route path="/about" exact component={About}/>
+                          <Route path="/blog" exact component={Blog}/>
+                          <Route path="/blog/:id" exact render={props => <BlogArticle{...props} />}/>
+                          <Route path="/login" exact component={Login}/>
+                      </div>
+                  </div>
+              </DebugRouter>
+          </div>
         );
     }
 }

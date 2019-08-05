@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Paper, Hidden, AppBar, Toolbar, Typography } from '@material-ui/core/'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Avatar from '@material-ui/core/Avatar';
@@ -63,18 +63,17 @@ class NavBar extends Component
                 <Hidden smDown>
                     <AppBar position="static" color="default">
                         <Tabs variant="fullWidth" >
-                            
-                            <Tab label="Home" component={Link} to="/" sm={6}/>
-                            <Tab label="Blog" component={Link} to="/blog" sm={6}/>
-                            <Tab label="About" component={Link} to="/about" sm={6}/>
-                            <Tab label="Login" component={Link} to="/login" sm={6}/>
+                            <Tab label="Home" component={Link} to="/" sm={6} index={0}/>
+                            <Tab label="Blog" component={Link} to="/blog" sm={6} index={1}/>
+                            <Tab label="About" component={Link} to="/about" sm={6} index={2}/>
+                            <Tab label="Login" component={Link} to="/login" sm={6} index={3}/>
                         </Tabs>
                     </AppBar>
                 </Hidden>
                 <Hidden smUp>
                     <AppBar position="static" color="default">
                         <Tabs variant="fullWidth" >
-                            <Tab label="Login" component={Link} to="/login" sm={0}/>
+                            <Tab label="Login" component={Link} to="/login" sm={0} index={0}/>
                         </Tabs>
                     </AppBar>
                 </Hidden>

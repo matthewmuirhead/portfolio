@@ -65,6 +65,14 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            #main {
+                height: 100%;
+            }
+
+            .container {
+                height: 100%;
+            }
         </style>
         <link href="./css/styles.css" rel="style/css"/>
     </head>

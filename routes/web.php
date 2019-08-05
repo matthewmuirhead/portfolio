@@ -13,23 +13,23 @@
 
 
 // Smart route
-// Route::view('/{path?}', 'welcome')
-//     ->where('path', '.*')
-//     ->name('react');
+Route::view('/{path?}', 'layouts.welcome')
+    ->where('path', '.*')
+    ->name('react');
 
 
-Route::get('/', function () {
-   return view('layouts.welcome');
-});
-
-Route::get('/blog', function () {
-   return view('layouts.app');
-});
-
-Route::get('/about', function () {
-   return view('layouts.app');
-});
-
-Route::get('/login', function () {
-   return view('layouts.app');
-});
+// Route::get('/', function () {
+//    return view('layouts.welcome');
+// });
+//
+// Route::get('/blog', function () {
+//    return view('layouts.app');
+// });
+//
+// Route::get('/about', function () {
+//    return view('layouts.app');
+// });
+//
+// Route::get('/login', function () {
+//    return view('layouts.app');
+// });

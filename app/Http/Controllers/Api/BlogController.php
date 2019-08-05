@@ -50,6 +50,8 @@ class BlogController extends Controller
     public function show($id)
     {
         //
+        $blogArticle = Blog::find($id);
+        return response()->json($blogArticle);
     }
 
     /**

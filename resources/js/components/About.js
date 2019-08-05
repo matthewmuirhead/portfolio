@@ -30,6 +30,10 @@ class About extends Component {
                 <Typography component="h2" variant="h1" gutterBottom className={classes.heading}>
                     About Me
                 </Typography>
+
+                <Typography component="body" variant="body" gutterBottom className={classes.heading}>
+                    I am a Software Engineering graduate currently living in Manchester.
+                </Typography>
             </div>
         );
     }
